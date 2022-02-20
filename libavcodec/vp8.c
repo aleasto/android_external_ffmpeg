@@ -2499,7 +2499,6 @@ int vp78_decode_mb_row_sliced(AVCodecContext *avctx, void *tdata, int jobnr,
 {
     VP8Context *s = avctx->priv_data;
     VP8ThreadData *td = &s->thread_data[jobnr];
-    VP8ThreadData *next_td = NULL, *prev_td = NULL;
     VP8Frame *curframe = s->curframe;
     int mb_y, num_jobs = s->num_jobs;
     int ret;
